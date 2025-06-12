@@ -15,7 +15,7 @@ def handle_message(update, context):
 
     # Match triggers
     if message == "/start":
-        context.bot.send_message(chat_id=chat_id, text="✅ This channel is ready to receive videos")
+        context.bot.send_message(chat_id=chat_id, text="✅ This channel is ready to receive videos Respond with y & n (where y=yes n)")
 
     elif message == "/stop":
         context.bot.send_message(chat_id=chat_id, text="⛔ This channel has stopped receiving videos")
