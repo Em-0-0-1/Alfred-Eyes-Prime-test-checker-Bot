@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: alfred-eyes-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python auto_reply_bot.py"
+    pythonVersion: 3.11.9
