@@ -15,7 +15,7 @@ def handle_message(update, context):
 
     # Match triggers
     if message == "/start":
-        context.bot.send_message(chat_id=chat_id, text="✅ This channel is ready to receive videos Respond with y & n (where y=yes n)")
+        context.bot.send_message(chat_id=chat_id, text="✅ This channel is ready to receive videos Respond with y & n (where y=yes n=No)")
 
     elif message == "/stop":
         context.bot.send_message(chat_id=chat_id, text="⛔ This channel has stopped receiving videos")
@@ -37,3 +37,6 @@ dp.add_handler(MessageHandler(Filters.text, handle_message))
 print("🤖 Bot is now running with multiple triggers...")
 updater.start_polling()
 updater.idle()
+
+# Trigger redeploy
+
