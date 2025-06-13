@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: alfred-eyes-prime-test-checker-bot
-    env: python
-    plan: free
+    name: alfred-eyes-bot
+    runtime: python
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python auto_reply_bot.py"
-    pythonVersion: 3.11
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
